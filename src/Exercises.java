@@ -83,7 +83,7 @@ public class Exercises {
 	
 	public ArrayList<String> middle(ArrayList<String> values) {
 	    if (values == null || values.size() < 3 || values.size() % 2 == 0) {
-            return new String[0];
+            return null;
         }
         
         String first = values[((values.size() - 1) / 2) - 1];
