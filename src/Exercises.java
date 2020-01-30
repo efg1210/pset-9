@@ -90,7 +90,12 @@ public class Exercises {
         String middle = values.get(((values.size() - 1) / 2));
         String last = values.get(((values.size() - 1) / 2) + 1);
         
-        return new String[] {first, middle, last};
+        ArrayList<String> answer = new ArrayList<String>(); { 
+        answer.add(first); 
+        answer.add(middle); 
+        answer.add(last);
+        
+        return answer; 
 	}
 
 	public boolean increasing(ArrayList<Integer> numbers) {
