@@ -86,9 +86,9 @@ public class Exercises {
             return null;
         }
         
-        String first = values[((values.size() - 1) / 2) - 1];
-        String middle = values[((values.size() - 1) / 2)];
-        String last = values[((values.size() - 1) / 2) + 1];
+        String first = values.get(((values.size() - 1) / 2) - 1);
+        String middle = values.get(((values.size() - 1) / 2));
+        String last = values.get(((values.size() - 1) / 2) + 1);
         
         return new String[] {first, middle, last};
 	}
