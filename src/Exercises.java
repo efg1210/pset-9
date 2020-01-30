@@ -104,7 +104,7 @@ public class Exercises {
         }
         
         for (int i = 1; i < numbers.size() - 1; i++) {
-            if ((numbers[i - 1] == (numbers[i] - 1)) && (numbers[i] == (numbers[i + 1] - 1))) {
+            if ((numbers.get(i - 1) == (numbers.get(i) - 1)) && (numbers.get(i) == (numbers.get(i + 1) - 1))) {
                 return true;
             }
         }
@@ -132,11 +132,11 @@ public class Exercises {
         counter = 0;
         for (int i = 0; i < 2; i++) {
             for (int j = i; j < numbers.size(); j += 2) {
-                if (numbers[j] == x) {
+                if (numbers.get(j) == x) {
                     counter++;
                 }
             }
-            if (numbers.size() % 2 == 1 && numbers[0] == x && numbers[numbers.size() - 1] == x) {
+            if (numbers.size() % 2 == 1 && numbers.get(0) == x && numbers.get(numbers.size() - 1) == x) {
                 if (counter == ((numbers.size() + 1) / 2)) {
                     return true;
                 }
@@ -152,7 +152,7 @@ public class Exercises {
         for (int i = 0; i < 3; i++) {
             counter = 0;
             for (int j = i; j < numbers.size(); j += 3) {
-                if (numbers[j] == x) {
+                if (numbers.get(j) == x) {
                     counter++;
                 }
             }
@@ -170,10 +170,10 @@ public class Exercises {
         }
         
         for (int i = 1; i < numbers.size() - 1; i++) {
-            if ((numbers[i - 1] % 2 == 0) && (numbers[i] % 2 == 0) && (numbers[i + 1] % 2 == 0)) {
+            if ((numbers.get(i - 1) % 2 == 0) && (numbers.get(i) % 2 == 0) && (numbers.get(i + 1) % 2 == 0)) {
                 return true;
             }
-            if ((numbers[i - 1] % 2 == 1) && (numbers[i] % 2 == 1) && (numbers[i + 1] % 2 == 1)) {
+            if ((numbers.get(i - 1) % 2 == 1) && (numbers.get(i) % 2 == 1) && (numbers.get(i + 1) % 2 == 1)) {
                 return true;
             }
         }
@@ -191,9 +191,9 @@ public class Exercises {
             int left = 0;
             for (int j = 0; j < numbers.size(); j++) {
                 if (j < i) {
-                    right += numbers[j];
+                    right += numbers.get(j);
                 } else {
-                    left += numbers[j];
+                    left += numbers.get(j);
                 }
             }
             if (right == left) {
@@ -221,10 +221,10 @@ public class Exercises {
         String lastClump = "";
         
         for (int i = 0; i < values.size() - 1; i++) {
-            if (values[i].equals(values[i + 1]) && !lastClump.equals(values[i])) {
+            if (values.get(i).equals(values.get(i + 1)) && !lastClump.equals(values.get(i))) {
                 clumpCounter++;
             }
-            lastClump = values[i];
+            lastClump = values.get(i);
         }
         
         return clumpCounter;
