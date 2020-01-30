@@ -16,7 +16,8 @@ public class Exercises {
 	
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
 	    if (values == null || values.size() < n || n < 0) {
-            return null;
+	        ArrayList<String> empty = new ArrayList<String>();
+	        return empty;
         }
         
 	    ArrayList<String> newArray = new ArrayList<String>();
@@ -83,14 +84,15 @@ public class Exercises {
 	
 	public ArrayList<String> middle(ArrayList<String> values) {
 	    if (values == null || values.size() < 3 || values.size() % 2 == 0) {
-            return null;
+	        ArrayList<String> empty = new ArrayList<String>();
+            return empty;
         }
         
         String first = values.get(((values.size() - 1) / 2) - 1);
         String middle = values.get(((values.size() - 1) / 2));
         String last = values.get(((values.size() - 1) / 2) + 1);
         
-        ArrayList<String> answer = new ArrayList<String>(); { 
+        ArrayList<String> answer = new ArrayList<String>(); 
         answer.add(first); 
         answer.add(middle); 
         answer.add(last);
@@ -229,5 +231,4 @@ public class Exercises {
         
         return clumpCounter;
     }
-	}
 }
