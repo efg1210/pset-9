@@ -22,7 +22,6 @@ public class Exercises {
         
 	    ArrayList<String> newArray = new ArrayList<String>();
         
-	    //ArrayList<String> firstArray /*= Arrays.copyOfRange(values, 0, n)*/;
 	    for (int i = 0; i < n; i++) {
 	        newArray.add(values.get(i));
 	    }
