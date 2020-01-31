@@ -25,7 +25,6 @@ public class Exercises {
 	    for (int i = 0; i < n; i++) {
 	        newArray.add(values.get(i));
 	    }
-	    //ArrayList<String> secondArray /*= Arrays.copyOfRange(values, (values.size() - n), values.size())*/;
         for (int i = (values.size() - n); i < values.size(); i++) {
             newArray.add(values.get(i));
         }    
