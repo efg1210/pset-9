@@ -27,8 +27,7 @@ public class Exercises {
 	    }
         for (int i = (values.size() - n); i < values.size(); i++) {
             newArray.add(values.get(i));
-        }    
-//        System.arraycopy(secondArray, 0, newArray, firstArray.size(), secondArray.size());
+        }
 		
 		return newArray;	// default return value to ensure compilation
 	}
