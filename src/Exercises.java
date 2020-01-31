@@ -1,16 +1,13 @@
 import java.util.*;
 
 public class Exercises {
-
 	public boolean commonEnd(ArrayList<Integer> a, ArrayList<Integer> b) {
 		if (a == null || a.isEmpty() || b == null || b.isEmpty()) {
 			return false;
 		}
-		
 		if (a.get(0) == b.get(0) || a.get(a.size() - 1) == b.get(b.size() - 1)) {
             return true;
         }
-        
         return false;
 	}
 	
@@ -18,27 +15,22 @@ public class Exercises {
 	    if (values == null || values.size() < n || n < 0) {
 	        ArrayList<String> empty = new ArrayList<String>();
 	        return empty;
-        }
-        
+        }   
 	    ArrayList<String> newArray = new ArrayList<String>();
-        
 	    for (int i = 0; i < n; i++) {
 	        newArray.add(values.get(i));
 	    }
         for (int i = (values.size() - n); i < values.size(); i++) {
             newArray.add(values.get(i));
         }
-		
 		return newArray;
 	}
 	
 	public int difference(ArrayList<Integer> numbers) {
 	    if (numbers == null || numbers.size() < 1) {
             return -1;
-        }
-        
+        }   
         Collections.sort(numbers);
-        
         return (numbers.get(numbers.size() - 1) - numbers.get(0));
 	}
 	
@@ -46,35 +38,29 @@ public class Exercises {
 	    if (numbers == null || numbers.size() < 3 || numbers.size() % 2 == 0) {
             return -1;
         }
-        
         for (double value : numbers) {
             if (value < 0) {
                 return -1;
             }
         }
-        
         double first = numbers.get(0);
         double middle = numbers.get((numbers.size() -1) / 2);
         double last = numbers.get(numbers.size() - 1);
-        
         if (first > middle || first == middle) {
             if (first > last || first == last) {
                 return first;
             }
         }
-        
         if (middle > first || middle == first) {
             if (middle > last || middle == last) {
                 return middle;
             }
         }
-        
         if (last > first || last == first) {
             if (last > middle || last == middle) {
                 return last;
             }
-        }
-                
+        }      
         return -1;
 	}
 	
@@ -83,16 +69,13 @@ public class Exercises {
 	        ArrayList<String> empty = new ArrayList<String>();
             return empty;
         }
-        
         String first = values.get(((values.size() - 1) / 2) - 1);
         String middle = values.get(((values.size() - 1) / 2));
         String last = values.get(((values.size() - 1) / 2) + 1);
-        
         ArrayList<String> answer = new ArrayList<String>(); 
         answer.add(first); 
         answer.add(middle); 
         answer.add(last);
-        
         return answer; 
 	}
 
@@ -100,13 +83,11 @@ public class Exercises {
 	    if (numbers == null || numbers.size() < 3) {
             return false;
         }
-        
         for (int i = 1; i < numbers.size() - 1; i++) {
             if ((numbers.get(i - 1) == (numbers.get(i) - 1)) && (numbers.get(i) == (numbers.get(i + 1) - 1))) {
                 return true;
             }
         }
-        
         return false;
 	}
 	
@@ -114,7 +95,6 @@ public class Exercises {
 	    if (numbers == null || numbers.size() < 1) {
             return false;
         }
-        
         //checks if everything is x
         int counter = 0;
         for (int value : numbers) {
@@ -125,7 +105,6 @@ public class Exercises {
         if (counter == numbers.size()) {
             return true;
         }
-        
         //checks if every other is x
         counter = 0;
         for (int i = 0; i < 2; i++) {
@@ -143,8 +122,7 @@ public class Exercises {
                     return true;
                 }
             }
-        }
-                
+        }       
         //checks if every third is x
         counter = 0;
         for (int i = 0; i < 3; i++) {
@@ -158,7 +136,6 @@ public class Exercises {
                 return true;
             }
         }
-        
         return false;
 	}
 	
@@ -166,7 +143,6 @@ public class Exercises {
 	    if (numbers == null || numbers.size() < 3) {
             return false;
         }
-        
         for (int i = 1; i < numbers.size() - 1; i++) {
             if ((numbers.get(i - 1) % 2 == 0) && (numbers.get(i) % 2 == 0) && (numbers.get(i + 1) % 2 == 0)) {
                 return true;
@@ -175,7 +151,6 @@ public class Exercises {
                 return true;
             }
         }
-        
         return false;
 	}
 	
@@ -183,7 +158,6 @@ public class Exercises {
 	    if (numbers == null || numbers.size() < 2) {
             return false;
         }
-        
         for (int i = 0; i < numbers.size(); i++) {
             int right = 0;
             int left = 0;
@@ -198,7 +172,6 @@ public class Exercises {
                 return true;
             }
         }
-        
         return false;
 	}
 	
@@ -214,17 +187,14 @@ public class Exercises {
         if (values.size() == 0 || values.size() == 1) {
             return 0;
         }
-        
         int clumpCounter = 0;
         String lastClump = "";
-        
         for (int i = 0; i < values.size() - 1; i++) {
             if (values.get(i).equals(values.get(i + 1)) && !lastClump.equals(values.get(i))) {
                 clumpCounter++;
             }
             lastClump = values.get(i);
         }
-        
         return clumpCounter;
     }
 }
