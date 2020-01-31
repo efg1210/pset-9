@@ -29,7 +29,7 @@ public class Exercises {
             newArray.add(values.get(i));
         }
 		
-		return newArray;	// default return value to ensure compilation
+		return newArray;
 	}
 	
 	public int difference(ArrayList<Integer> numbers) {
